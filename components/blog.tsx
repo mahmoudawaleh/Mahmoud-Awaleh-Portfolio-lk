@@ -9,31 +9,44 @@ import Image from "next/image"
 export default function Blog() {
   const posts = [
     {
+      title: "Exploring AI-Powered Design: My Experience with Google Gemini",
+      excerpt:
+        "In this post, I share my insights on using Google Gemini for creative design work and how AI tools are transforming the design landscape in government communications.",
+      image: "/images/blog/ai-gemini-cover.jpeg",
+      category: "Technology",
+      date: "June 10, 2024",
+      readTime: "5 min read",
+      featured: true,
+      link: "/blog/gemini-ai-design",
+    },
+    {
+      title: "The Future of Government Communication in the Digital Age",
+      excerpt:
+        "Exploring how modern communication strategies can bridge the gap between government institutions and citizens through digital innovation and strategic engagement.",
+      image: "/placeholder.svg?height=250&width=400",
+      category: "Communication",
+      date: "Dec 15, 2023",
+      readTime: "5 min read",
+      featured: true,
+      link: "/blog/government-communication-digital-age",
+    },
+    {
       title: "My Complete Design Portfolio 2021 - A Journey Through 15 Years",
       excerpt:
         "Take a comprehensive look at my design evolution, featuring major projects, brand identities, and creative solutions developed over 15 years of professional experience.",
       image: "/images/mahmoud-formal.jpg",
       category: "Portfolio",
-      date: "Dec 20, 2024",
+      date: "Dec 20, 2023",
       readTime: "10 min read",
-      featured: true,
+      featured: false,
       link: "https://issuu.com/mahmoudawaleh/docs/m2_portfolio_2021",
-    },
-    {
-      title: "The Future of Government Communication in Digital Age",
-      excerpt:
-        "Exploring how modern communication strategies can bridge the gap between government institutions and citizens.",
-      image: "/placeholder.svg?height=250&width=400",
-      category: "Communication",
-      date: "Dec 15, 2024",
-      readTime: "5 min read",
     },
     {
       title: "Building Trust Through Visual Identity Design",
       excerpt: "How strategic design choices can enhance public trust and improve institutional credibility.",
       image: "/placeholder.svg?height=250&width=400",
       category: "Design",
-      date: "Dec 10, 2024",
+      date: "Dec 10, 2023",
       readTime: "7 min read",
     },
     {
@@ -41,16 +54,8 @@ export default function Blog() {
       excerpt: "Lessons learned from transitioning from high-paying private sector roles to meaningful public service.",
       image: "/placeholder.svg?height=250&width=400",
       category: "Career",
-      date: "Dec 5, 2024",
+      date: "Dec 5, 2023",
       readTime: "6 min read",
-    },
-    {
-      title: "The Impact of Strategic Branding on National Identity",
-      excerpt: "How thoughtful branding initiatives can strengthen national identity and civic pride.",
-      image: "/placeholder.svg?height=250&width=400",
-      category: "Branding",
-      date: "Nov 28, 2024",
-      readTime: "8 min read",
     },
   ]
 
@@ -70,11 +75,9 @@ export default function Blog() {
             <Card key={index} className="group overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative overflow-hidden">
                 {post.image.startsWith("/placeholder") ? (
-                  <img
-                    src={post.image || "/placeholder.svg"}
-                    alt={post.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                    <span className="text-white font-semibold">{post.category}</span>
+                  </div>
                 ) : (
                   <Image
                     src={post.image || "/placeholder.svg"}
@@ -103,9 +106,9 @@ export default function Blog() {
                   variant="ghost"
                   size="sm"
                   className="p-0 h-auto text-purple-600 hover:text-purple-700"
-                  onClick={() => (post.link ? window.open(post.link, "_blank") : undefined)}
+                  onClick={() => (post.link ? window.open(post.link, "_self") : undefined)}
                 >
-                  {post.link ? "View Portfolio" : "Read More"}
+                  {post.link && post.link.startsWith("http") ? "View External Link" : "Read More"}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </CardContent>

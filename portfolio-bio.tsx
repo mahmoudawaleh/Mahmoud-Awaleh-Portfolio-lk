@@ -18,8 +18,8 @@ export default function Component() {
   const projects = [
     "Somaliland National ID Card Design",
     "Somaliland Voter ID Design",
+    "Somaliland Visa Sticker Design System",
     "First Somaliland Vehicle Tax Sticker Design",
-    "Somaliland Visa Sticker Design",
     "Somaliland Regional Sports Logos Redesign (2020)",
   ]
 

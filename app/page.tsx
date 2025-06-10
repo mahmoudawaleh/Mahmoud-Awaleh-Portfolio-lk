@@ -11,6 +11,8 @@ import Clients from "@/components/clients"
 import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
+import DesignShowcase from "@/components/design-showcase"
+import GovernmentPublications from "@/components/government-publications"
 
 export default function HomePage() {
   return (
@@ -20,6 +22,8 @@ export default function HomePage() {
       <About />
       <WorkProcess />
       <Portfolio />
+      <DesignShowcase />
+      <GovernmentPublications />
       <MagazineSection />
       <CallToAction />
       <Blog />

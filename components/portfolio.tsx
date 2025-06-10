@@ -16,6 +16,23 @@ export default function Portfolio() {
       tags: ["Branding", "Government", "Identity Design"],
     },
     {
+      title: "Somaliland Visa Sticker Design",
+      category: "Government Security",
+      description:
+        "Comprehensive visa sticker design system featuring multiple visa types with advanced security features and professional government branding.",
+      image: "/images/visa-design.jpeg",
+      tags: ["Security Design", "Government", "Document Design"],
+    },
+    {
+      title: "Somaliland Presidential Special Force (CIM) Logo",
+      category: "Government Security",
+      description:
+        "Professional logo design for Ciidanka Ilaalada Madaxtooyada JSL (CIM) - the Presidential Special Force, featuring military symbolism and national identity elements.",
+      image: "/images/cim/cim-logo-main.png",
+      tags: ["Security Design", "Government", "Military Branding"],
+      link: "/portfolio/cim-special-force",
+    },
+    {
       title: "Somaliland Voter ID Design",
       category: "Electoral Design",
       description: "Comprehensive voter identification card design for democratic processes.",
@@ -33,17 +50,19 @@ export default function Portfolio() {
       title: "CSC Somaliland Magazine Collection",
       category: "Editorial & Publishing",
       description:
-        "Quarterly magazine publication showcasing civil service reforms, achievements, and institutional developments.",
-      image: "/placeholder.svg?height=300&width=400",
+        "Quarterly magazine publication showcasing civil service reforms, achievements, and institutional developments throughout 2023.",
+      image: "/images/magazines/csc-q1-2023.png",
       tags: ["Publishing", "Editorial", "Communications"],
-      link: "https://drive.google.com/drive/folders/1dI1-QKDL5cmFDz-hvdxCBxF7vNUvxffr",
+      link: "/portfolio/magazine",
     },
     {
       title: "Regional Sports Logos Redesign",
       category: "Sports Branding",
-      description: "Complete redesign of Somaliland regional sports logos and branding.",
-      image: "/placeholder.svg?height=300&width=400",
+      description:
+        "Complete redesign of Somaliland regional sports logos and branding, creating professional identities for football clubs across the country.",
+      image: "/images/sports-logos/all-logos.webp",
       tags: ["Sports", "Regional", "Logo Design"],
+      link: "/portfolio/sports-logos",
     },
     {
       title: "Civil Service Commission Branding",
@@ -149,12 +168,24 @@ export default function Portfolio() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 ) : (
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                      style={{
+                        filter: project.title === "Somaliland Visa Sticker Design" ? "blur(2px)" : "none",
+                      }}
+                    />
+                    {project.title === "Somaliland Visa Sticker Design" && (
+                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <div className="bg-white/90 px-4 py-2 rounded-lg">
+                          <p className="text-sm font-semibold text-gray-800">Security Blurred</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 )}
                 <div className="absolute inset-0 bg-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
