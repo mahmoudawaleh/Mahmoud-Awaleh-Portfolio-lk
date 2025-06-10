@@ -9,6 +9,17 @@ import Image from "next/image"
 export default function Blog() {
   const posts = [
     {
+      title: "Exploring Creative Possibilities with Google Gemini",
+      excerpt:
+        "Discover how I'm using Google Gemini to enhance creative workflows and explore new design possibilities in my professional projects.",
+      image: "/images/blog/gemini-share-screenshot.jpeg",
+      category: "AI Tools",
+      date: "June 15, 2024",
+      readTime: "4 min read",
+      featured: true,
+      link: "/blog/gemini-creative-exploration",
+    },
+    {
       title: "Exploring AI-Powered Design: My Experience with Google Gemini",
       excerpt:
         "In this post, I share my insights on using Google Gemini for creative design work and how AI tools are transforming the design landscape in government communications.",
