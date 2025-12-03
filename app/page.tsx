@@ -16,7 +16,7 @@ import GovernmentPublications from "@/components/government-publications"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div id="main-content" className="min-h-screen bg-white">
       <Header />
       <Hero />
       <About />

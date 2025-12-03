@@ -43,13 +43,13 @@ export default function Services() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What I do?</h2>
-              <p className="text-gray-600 leading-relaxed">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">What I do?</h2>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 I combine creative vision with strategic communication to build meaningful connections between
                 organizations and their audiences. My expertise spans traditional and digital media, with a focus on
                 government communication and public service excellence.
@@ -58,23 +58,23 @@ export default function Services() {
 
             <div className="space-y-6">
               <div className="border-l-4 border-purple-600 pl-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">User Experience (UX)</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">User Experience (UX)</h3>
+                <p className="text-gray-600 dark:text-gray-300">
                   Designing intuitive experiences that make government services more accessible and user-friendly for
                   citizens.
                 </p>
               </div>
 
               <div className="border-l-4 border-purple-600 pl-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">User Interface (UI)</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">User Interface (UI)</h3>
+                <p className="text-gray-600 dark:text-gray-300">
                   Creating clean, modern interfaces that enhance digital communication and improve user engagement.
                 </p>
               </div>
 
               <div className="border-l-4 border-purple-600 pl-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Web Development</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Web Development</h3>
+                <p className="text-gray-600 dark:text-gray-300">
                   Building responsive, accessible websites and digital platforms that serve diverse audiences
                   effectively.
                 </p>
@@ -94,13 +94,16 @@ export default function Services() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300">
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 dark:bg-gray-900 dark:border-gray-700"
+              >
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-600 transition-colors">
+                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-600 transition-colors">
                     <service.icon className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
