@@ -13,10 +13,15 @@ import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import DesignShowcase from "@/components/design-showcase"
 import GovernmentPublications from "@/components/government-publications"
+import ScrollProgress from "@/components/scroll-progress"
+import BackToTop from "@/components/back-to-top"
+import CursorFollower from "@/components/cursor-follower"
 
 export default function HomePage() {
   return (
-    <div id="main-content" className="min-h-screen bg-white">
+    <div id="main-content" className="min-h-screen bg-background scrollbar-gold">
+      <ScrollProgress />
+      <CursorFollower />
       <Header />
       <Hero />
       <About />
@@ -32,6 +37,7 @@ export default function HomePage() {
       <Testimonials />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   )
 }

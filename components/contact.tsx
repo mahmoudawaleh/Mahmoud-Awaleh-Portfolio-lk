@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Send, Facebook, Instagram, Linkedin, Loader2, CheckCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Send, Facebook, Instagram, Linkedin, Loader2, CheckCircle, Sparkles, ArrowRight } from "lucide-react"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -18,6 +19,7 @@ function XIcon({ className }: { className?: string }) {
 }
 
 export default function Contact() {
+  const [sectionRef, isVisible] = useScrollAnimation<HTMLElement>({ threshold: 0.1 })
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -70,11 +72,23 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Let's discuss your Project</h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+    <section ref={sectionRef} id="contact" className="py-24 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-sand-50 via-white to-sand-50 dark:from-sand-700/10 dark:via-sand-800/5 dark:to-sand-700/10" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sand-300/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-sand-400/10 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Sparkles className="w-5 h-5 text-sand-400" />
+            <span className="text-sm font-medium text-sand-400 uppercase tracking-wider">Get In Touch</span>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-sand-700 dark:text-sand-100 mb-6">
+            Let's Discuss Your <span className="gold-gradient-text">Project</span>
+          </h2>
+          <p className="text-sand-600 dark:text-sand-300 max-w-2xl mx-auto text-lg">
             Ready to transform your communication strategy? Get in touch to discuss how we can work together on
             meaningful projects.
           </p>
@@ -82,107 +96,93 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className={`space-y-8 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Get in Touch</h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+              <h3 className="text-2xl font-bold text-sand-700 dark:text-sand-100 mb-4">Get in Touch</h3>
+              <p className="text-sand-600 dark:text-sand-300 leading-relaxed">
                 I'm always interested in discussing new opportunities, creative projects, and ways to contribute to
                 meaningful communication initiatives.
               </p>
             </div>
 
-            <div className="space-y-6">
+            {/* Contact Cards */}
+            <div className="space-y-4">
               <a
                 href="tel:+252634706330"
-                className="flex items-center space-x-4 group hover:bg-purple-50 dark:hover:bg-purple-900/20 p-3 rounded-lg transition-colors"
+                className="group flex items-center gap-4 p-4 glass rounded-2xl border border-sand-200/50 hover-lift"
               >
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-purple-600" />
+                <div className="w-14 h-14 gold-gradient rounded-xl flex items-center justify-center shadow-gold group-hover:scale-110 transition-transform">
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Phone</div>
-                  <div className="text-gray-600 dark:text-gray-300 group-hover:text-purple-600">+252 63 4706330</div>
+                <div className="flex-1">
+                  <div className="font-semibold text-sand-700 dark:text-sand-100">Phone</div>
+                  <div className="text-sand-500 group-hover:text-sand-400 transition-colors">+252 63 4706330</div>
                 </div>
+                <ArrowRight className="w-5 h-5 text-sand-400 group-hover:translate-x-1 transition-transform" />
               </a>
 
               <a
                 href="mailto:info@cscsomaliland.org"
-                className="flex items-center space-x-4 group hover:bg-purple-50 dark:hover:bg-purple-900/20 p-3 rounded-lg transition-colors"
+                className="group flex items-center gap-4 p-4 glass rounded-2xl border border-sand-200/50 hover-lift"
               >
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-purple-600" />
+                <div className="w-14 h-14 gold-gradient rounded-xl flex items-center justify-center shadow-gold group-hover:scale-110 transition-transform">
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Email</div>
-                  <div className="text-gray-600 dark:text-gray-300 group-hover:text-purple-600">
-                    info@cscsomaliland.org
-                  </div>
+                <div className="flex-1">
+                  <div className="font-semibold text-sand-700 dark:text-sand-100">Email</div>
+                  <div className="text-sand-500 group-hover:text-sand-400 transition-colors">info@cscsomaliland.org</div>
                 </div>
+                <ArrowRight className="w-5 h-5 text-sand-400 group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <div className="flex items-center space-x-4 p-3">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-purple-600" />
+              <div className="flex items-center gap-4 p-4 glass rounded-2xl border border-sand-200/50">
+                <div className="w-14 h-14 gold-gradient rounded-xl flex items-center justify-center shadow-gold">
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Location</div>
-                  <div className="text-gray-600 dark:text-gray-300">Hargeisa, Somaliland</div>
+                  <div className="font-semibold text-sand-700 dark:text-sand-100">Location</div>
+                  <div className="text-sand-500">Hargeisa, Somaliland</div>
                 </div>
               </div>
             </div>
 
-            {/* Social Media - Updated with proper aria-labels */}
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
-                <a
-                  href="https://facebook.com/mahmoud.awaleh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow on Facebook"
-                  className="w-10 h-10 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white text-purple-600 transition-colors"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com/mahmoudawaleh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow on X (formerly Twitter)"
-                  className="w-10 h-10 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white text-purple-600 transition-colors"
-                >
-                  <XIcon className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://www.instagram.com/m2awaleh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow on Instagram"
-                  className="w-10 h-10 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white text-purple-600 transition-colors"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com/in/mahmoudawaleh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Connect on LinkedIn"
-                  className="w-10 h-10 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white text-purple-600 transition-colors"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
+            {/* Social Media */}
+            <div className="pt-4">
+              <h4 className="font-semibold text-sand-700 dark:text-sand-100 mb-4">Follow Me</h4>
+              <div className="flex gap-3">
+                {[
+                  { icon: Facebook, href: "https://facebook.com/mahmoud.awaleh", label: "Facebook" },
+                  { icon: XIcon, href: "https://twitter.com/mahmoudawaleh", label: "X" },
+                  { icon: Instagram, href: "https://www.instagram.com/m2awaleh", label: "Instagram" },
+                  { icon: Linkedin, href: "https://linkedin.com/in/mahmoudawaleh", label: "LinkedIn" },
+                ].map((social, i) => (
+                  <a
+                    key={i}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow on ${social.label}`}
+                    className="w-12 h-12 glass rounded-xl flex items-center justify-center text-sand-500 hover:gold-gradient hover:text-white hover:shadow-gold transition-all duration-300 border border-sand-200/50"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Contact Form - Updated with proper labels and validation */}
-          <Card className="dark:bg-gray-800 dark:border-gray-700">
+          {/* Contact Form */}
+          <Card className={`glass border-sand-200/50 shadow-3d overflow-hidden transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            {/* Top accent */}
+            <div className="h-1 gold-gradient" />
             <CardContent className="p-8">
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <div className="w-20 h-20 gold-gradient rounded-full flex items-center justify-center mb-6 shadow-gold animate-scale-in">
+                    <CheckCircle className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-sand-700 dark:text-sand-100 mb-2">Message Sent!</h3>
+                  <p className="text-sand-600 dark:text-sand-300">
                     Thank you for reaching out. I'll get back to you soon.
                   </p>
                 </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                     <div>
                       <label
                         htmlFor="firstName"
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2"
+                        className="block text-sm font-medium text-sand-700 dark:text-sand-200 mb-2"
                       >
                         First Name <span className="text-red-500">*</span>
                       </label>
@@ -204,7 +204,7 @@ export default function Contact() {
                         onChange={handleChange}
                         aria-invalid={!!errors.firstName}
                         aria-describedby={errors.firstName ? "firstName-error" : undefined}
-                        className={errors.firstName ? "border-red-500" : ""}
+                        className={`bg-sand-50/50 border-sand-200 focus:border-sand-400 focus:ring-sand-400/20 rounded-xl ${errors.firstName ? "border-red-500" : ""}`}
                       />
                       {errors.firstName && (
                         <p id="firstName-error" className="text-red-500 text-sm mt-1">
@@ -323,7 +323,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-purple-600 hover:bg-purple-700"
+                    className="w-full btn-gold h-14 text-lg font-semibold rounded-xl group"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
