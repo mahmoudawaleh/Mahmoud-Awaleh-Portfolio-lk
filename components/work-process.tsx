@@ -44,12 +44,12 @@ export default function WorkProcess() {
           {steps.map((step, index) => (
             <Card key={index} className="relative group hover:shadow-xl transition-all duration-300">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-600 transition-colors">
-                  <step.icon className="w-8 h-8 text-purple-600 group-hover:text-white transition-colors" />
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
+                  <step.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                <div className="absolute top-4 right-4 w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                <div className="absolute top-4 right-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">{index + 1}</span>
                 </div>
               </CardContent>

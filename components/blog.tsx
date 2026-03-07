@@ -86,7 +86,7 @@ export default function Blog() {
             <Card key={index} className="group overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative overflow-hidden">
                 {post.image.startsWith("/placeholder") ? (
-                  <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                  <div className="w-full h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center">
                     <span className="text-white font-semibold">{post.category}</span>
                   </div>
                 ) : (
@@ -99,7 +99,7 @@ export default function Blog() {
                   />
                 )}
                 <div className="absolute top-4 left-4">
-                  <Badge className={`${post.featured ? "bg-yellow-500" : "bg-purple-600"} text-white`}>
+                  <Badge className={`${post.featured ? "bg-primary" : "bg-accent"} text-white`}>
                     {post.category}
                   </Badge>
                 </div>
@@ -109,14 +109,14 @@ export default function Blog() {
                   <Calendar className="w-4 h-4 mr-2" />
                   {post.date} • {post.readTime}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{post.excerpt}</p>
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="p-0 h-auto text-purple-600 hover:text-purple-700"
+                  className="p-0 h-auto text-primary hover:text-accent"
                   onClick={() => (post.link ? window.open(post.link, "_self") : undefined)}
                 >
                   {post.link && post.link.startsWith("http") ? "View External Link" : "Read More"}

@@ -25,7 +25,7 @@ export default function GeminiShareBlog() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-purple-600 hover:text-purple-700">
+          <Link href="/blog" className="inline-flex items-center text-primary hover:text-accent">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
           </Link>
@@ -43,7 +43,7 @@ export default function GeminiShareBlog() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
               <div className="absolute bottom-8 left-8 right-8">
-                <Badge className="mb-4 bg-blue-500 text-white">{post.category}</Badge>
+                <Badge className="mb-4 bg-primary text-white">{post.category}</Badge>
                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{post.title}</h1>
               </div>
             </div>
@@ -92,9 +92,9 @@ export default function GeminiShareBlog() {
                 project I've been developing with Gemini that demonstrates its potential for creative professionals.
               </p>
 
-              <div className="my-8 bg-blue-50 border border-blue-100 rounded-xl p-6">
+              <div className="my-8 bg-primary/10 border border-primary/20 rounded-xl p-6">
                 <div className="flex items-start">
-                  <Sparkles className="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" />
+                  <Sparkles className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Interactive Gemini Project</h3>
                     <p className="text-gray-700 mb-4">
@@ -102,7 +102,7 @@ export default function GeminiShareBlog() {
                       thinking and creative problem-solving. Click the link below to explore the full project:
                     </p>
                     <Button
-                      className="bg-blue-600 hover:bg-blue-700"
+                      className="bg-primary hover:bg-accent"
                       onClick={() => window.open(post.geminiLink, "_blank")}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
@@ -161,17 +161,17 @@ export default function GeminiShareBlog() {
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Key Takeaways</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>
                       AI tools like Gemini are most effective when used to enhance human creativity, not replace it
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Integrating AI into creative workflows can help explore more possibilities in less time</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>
                       The future of design likely involves collaborative processes between human designers and AI tools
                     </span>
@@ -207,14 +207,14 @@ export default function GeminiShareBlog() {
         </article>
 
         {/* Featured Link Card */}
-        <Card className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <Card className="mt-8 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
           <CardContent className="p-6">
             <h3 className="text-lg font-semibold mb-2">Explore My Gemini Project</h3>
             <p className="text-gray-600 mb-4">
               Check out my interactive project created with Google Gemini to see how I'm using AI in my creative
               process.
             </p>
-            <Button onClick={() => window.open(post.geminiLink, "_blank")} className="bg-blue-600 hover:bg-blue-700">
+            <Button onClick={() => window.open(post.geminiLink, "_blank")} className="bg-primary hover:bg-accent">
               <ExternalLink className="w-4 h-4 mr-2" />
               View Gemini Project
             </Button>
@@ -242,7 +242,7 @@ export default function GeminiShareBlog() {
                   Communications Director at the Somaliland Civil Service Commission and is exploring innovative ways to
                   incorporate AI tools into government communications.
                 </p>
-                <Link href="/#about" className="text-purple-600 hover:text-purple-700 font-medium">
+                <Link href="/#about" className="text-primary hover:text-accent font-medium">
                   Learn more
                 </Link>
               </div>

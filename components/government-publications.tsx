@@ -64,7 +64,7 @@ export default function GovernmentPublications() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">Official Publications</Badge>
+          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Official Publications</Badge>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Government Publication Design</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Professional design for official government documents, publications, and branding systems that communicate
@@ -118,7 +118,7 @@ export default function GovernmentPublications() {
                   key={index}
                   onClick={() => setActiveIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? "bg-purple-600 w-6" : "bg-gray-300"
+                      index === activeIndex ? "bg-primary w-6" : "bg-gray-300"
                   }`}
                   aria-label={`Go to publication ${index + 1}`}
                 />
@@ -165,7 +165,7 @@ export default function GovernmentPublications() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                      <Button className="bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
+                      <Button className="bg-primary hover:bg-accent transition-all duration-300 transform hover:scale-105">
                         <Eye className="mr-2 w-4 h-4" />
                         View Details
                       </Button>
@@ -184,7 +184,7 @@ export default function GovernmentPublications() {
         {/* Corporate Branding Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">Corporate Identity</Badge>
+            <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Corporate Identity</Badge>
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Institutional & Corporate Branding</h3>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Professional branding and signage design for government institutions and corporate clients, creating
@@ -208,7 +208,7 @@ export default function GovernmentPublications() {
                 </div>
               </div>
               <CardContent className="p-6">
-                <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
                   Civil Service Commission Building Signage
                 </h4>
                 <p className="text-gray-600 text-sm mb-4">
@@ -216,13 +216,16 @@ export default function GovernmentPublications() {
                   bilingual text in the national colors.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="text-xs transition-colors duration-300 hover:bg-purple-50">
+                  <Badge                           variant="outline"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10">
                     Signage
                   </Badge>
-                  <Badge variant="outline" className="text-xs transition-colors duration-300 hover:bg-purple-50">
+                  <Badge                           variant="outline"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10">
                     3D Design
                   </Badge>
-                  <Badge variant="outline" className="text-xs transition-colors duration-300 hover:bg-purple-50">
+                  <Badge                           variant="outline"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10">
                     Government
                   </Badge>
                 </div>
@@ -244,7 +247,7 @@ export default function GovernmentPublications() {
                 </div>
               </div>
               <CardContent className="p-6">
-                <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
                   Landnest General Trading Office Signage
                 </h4>
                 <p className="text-gray-600 text-sm mb-4">
@@ -252,13 +255,16 @@ export default function GovernmentPublications() {
                   contemporary typography and brand colors.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="text-xs transition-colors duration-300 hover:bg-purple-50">
+                  <Badge                           variant="outline"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10">
                     Corporate
                   </Badge>
-                  <Badge variant="outline" className="text-xs transition-colors duration-300 hover:bg-purple-50">
+                  <Badge                           variant="outline"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10">
                     Interior Design
                   </Badge>
-                  <Badge variant="outline" className="text-xs transition-colors duration-300 hover:bg-purple-50">
+                  <Badge                           variant="outline"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10">
                     Branding
                   </Badge>
                 </div>
@@ -280,8 +286,8 @@ export default function GovernmentPublications() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-purple-600 font-semibold text-sm">1</span>
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-primary font-semibold text-sm">1</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">National Identity Integration</h4>
@@ -291,8 +297,8 @@ export default function GovernmentPublications() {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-purple-600 font-semibold text-sm">2</span>
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-primary font-semibold text-sm">2</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Bilingual Excellence</h4>
@@ -303,19 +309,32 @@ export default function GovernmentPublications() {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-purple-600 font-semibold text-sm">3</span>
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-primary font-semibold text-sm">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Information Hierarchy</h4>
-                      <p className="text-sm text-gray-600">
-                        Creating clear visual hierarchies that make complex information accessible and navigable.
-                      </p>
+                      <h4 className="font-semibold text-gray-900">Golden eagle symbolizing strength and vigilance</h4>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-purple-600 font-semibold text-sm">4</span>
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-primary font-semibold text-sm">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Crossed rifles representing military readiness</h4>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-primary font-semibold text-sm">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Five-pointed star for national identity</h4>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-primary font-semibold text-sm">4</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Consistency & Systems</h4>

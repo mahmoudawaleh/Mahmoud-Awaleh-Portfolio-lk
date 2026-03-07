@@ -120,14 +120,14 @@ export default function MagazineGallery() {
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         <div className="mb-8">
-          <Link href="/#portfolio" className="inline-flex items-center text-purple-600 hover:text-purple-700">
+          <Link href="/#portfolio" className="inline-flex items-center text-primary hover:text-accent">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio
           </Link>
         </div>
 
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">Official Publication</Badge>
+          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Official Publication</Badge>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">CSC Somaliland Magazine Collection</h1>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Quarterly publication showcasing civil service reforms, achievements, and institutional developments
@@ -170,7 +170,7 @@ export default function MagazineGallery() {
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 rounded-full ${index === activeIndex ? "bg-purple-600" : "bg-gray-300"}`}
+                  className={`w-3 h-3 rounded-full ${index === activeIndex ? "bg-primary" : "bg-gray-300"}`}
                   aria-label={`Go to issue ${index + 1}`}
                 />
               ))}
@@ -187,21 +187,21 @@ export default function MagazineGallery() {
                 <div>
                   <h3 className="text-sm font-semibold text-gray-500 mb-2">PUBLICATION DATE</h3>
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-purple-600" />
+                    <Calendar className="w-4 h-4 text-primary" />
                     <p className="text-lg font-medium">{activeMagazine.date}</p>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-500 mb-2">PAGES</h3>
                   <div className="flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-purple-600" />
+                    <FileText className="w-4 h-4 text-primary" />
                     <p className="text-lg font-medium">{activeMagazine.pages}</p>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-gray-500 mb-2">LANGUAGE</h3>
                   <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-purple-600" />
+                    <Users className="w-4 h-4 text-primary" />
                     <p className="text-lg font-medium">{activeMagazine.language}</p>
                   </div>
                 </div>
@@ -213,7 +213,7 @@ export default function MagazineGallery() {
                   <div className="space-y-2">
                     {activeMagazine.highlights.map((highlight, index) => (
                       <div key={index} className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-gray-600">{highlight}</span>
                       </div>
                     ))}
@@ -225,7 +225,7 @@ export default function MagazineGallery() {
                   <div className="space-y-2">
                     {activeMagazine.articles.map((article, index) => (
                       <div key={index} className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-gray-600">{article}</span>
                       </div>
                     ))}
@@ -234,7 +234,7 @@ export default function MagazineGallery() {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button
-                    className="bg-purple-600 hover:bg-purple-700"
+                    className="bg-primary hover:bg-accent"
                     onClick={() =>
                       window.open("https://drive.google.com/drive/folders/1dI1-QKDL5cmFDz-hvdxCBxF7vNUvxffr", "_blank")
                     }
@@ -260,7 +260,7 @@ export default function MagazineGallery() {
               <Card
                 key={index}
                 className={`cursor-pointer transition-all hover:shadow-lg ${
-                  index === activeIndex ? "ring-2 ring-purple-600" : ""
+                  index === activeIndex ? "ring-2 ring-primary" : ""
                 }`}
                 onClick={() => setActiveIndex(index)}
               >
@@ -298,15 +298,15 @@ export default function MagazineGallery() {
                 </p>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Quarterly publication schedule</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Bilingual content (English & Somali)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Professional photography and design</span>
                   </li>
                 </ul>
@@ -315,23 +315,23 @@ export default function MagazineGallery() {
                 <h3 className="text-lg font-semibold mb-3">Design Excellence</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Consistent CSC brand identity with green and red color scheme</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>High-quality photography of government events and officials</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Modern layout design with clear information hierarchy</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Bilingual typography and cultural sensitivity</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Strategic use of infographics and visual elements</span>
                   </li>
                 </ul>
@@ -344,7 +344,7 @@ export default function MagazineGallery() {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-purple-600 hover:bg-purple-700"
+              className="bg-primary hover:bg-accent"
             onClick={() =>
               window.open("https://drive.google.com/drive/folders/1dI1-QKDL5cmFDz-hvdxCBxF7vNUvxffr", "_blank")
             }

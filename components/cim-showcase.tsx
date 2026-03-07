@@ -45,7 +45,7 @@ export default function CIMShowcase() {
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         <div className="mb-8">
-          <Link href="/#portfolio" className="inline-flex items-center text-purple-600 hover:text-purple-700">
+          <Link href="/#portfolio" className="inline-flex items-center text-primary hover:text-accent">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio
           </Link>

@@ -24,7 +24,7 @@ export default function GovernmentCommunicationBlog() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-purple-600 hover:text-purple-700">
+          <Link href="/blog" className="inline-flex items-center text-primary hover:text-accent">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
           </Link>
@@ -32,7 +32,7 @@ export default function GovernmentCommunicationBlog() {
 
         <article className="bg-white rounded-2xl shadow-lg overflow-hidden">
           {/* Featured Image */}
-          <div className="relative h-[400px] w-full bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+          <div className="relative h-[400px] w-full bg-gradient-to-r from-primary to-accent">
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white">
@@ -89,9 +89,9 @@ export default function GovernmentCommunicationBlog() {
                 but also trust, transparency, and service delivery.
               </p>
 
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 my-8 rounded-r-lg">
+              <div className="bg-primary/10 border-l-4 border-primary p-6 my-8 rounded-r-lg">
                 <div className="flex items-start">
-                  <MessageSquare className="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <MessageSquare className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       🛰️ From One-Way Broadcast to Two-Way Dialogue
@@ -132,9 +132,9 @@ export default function GovernmentCommunicationBlog() {
                 </div>
               </div>
 
-              <div className="bg-purple-50 border-l-4 border-purple-500 p-6 my-8 rounded-r-lg">
+              <div className="bg-accent/10 border-l-4 border-accent p-6 my-8 rounded-r-lg">
                 <div className="flex items-start">
-                  <Globe className="w-6 h-6 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <Globe className="w-6 h-6 text-accent mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">🌍 Local Voice, Global Standards</h3>
                     <p className="text-gray-700 leading-relaxed">
@@ -231,7 +231,7 @@ export default function GovernmentCommunicationBlog() {
         </article>
 
         {/* Related Content */}
-        <Card className="mt-8 bg-gradient-to-r from-purple-50 to-blue-50">
+        <Card className="mt-8 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
           <CardContent className="p-6">
             <h3 className="text-lg font-semibold mb-2">Related Work</h3>
             <p className="text-gray-600 mb-4">
@@ -239,7 +239,7 @@ export default function GovernmentCommunicationBlog() {
               and digital initiatives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={() => window.open("/#portfolio", "_self")} className="bg-purple-600 hover:bg-purple-700">
+              <Button onClick={() => window.open("/#portfolio", "_self")} className="bg-primary hover:bg-accent">
                 View Government Projects
               </Button>
               <Button variant="outline" onClick={() => window.open("/portfolio/magazine", "_self")}>
@@ -270,7 +270,7 @@ export default function GovernmentCommunicationBlog() {
                   With over 15 years of experience in design and communications, he specializes in bridging the gap
                   between government institutions and citizens through innovative digital solutions.
                 </p>
-                <Link href="/#about" className="text-purple-600 hover:text-purple-700 font-medium">
+                <Link href="/#about" className="text-primary hover:text-accent font-medium">
                   Learn more about Mahmoud
                 </Link>
               </div>

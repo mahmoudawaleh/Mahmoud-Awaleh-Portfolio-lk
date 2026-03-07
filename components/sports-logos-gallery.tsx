@@ -73,14 +73,14 @@ export default function SportsLogosGallery() {
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-4">
         <div className="mb-8">
-          <Link href="/#portfolio" className="inline-flex items-center text-purple-600 hover:text-purple-700">
+          <Link href="/#portfolio" className="inline-flex items-center text-primary hover:text-accent">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio
           </Link>
         </div>
 
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">Sports Branding</Badge>
+          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Sports Branding</Badge>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Somaliland Regional Sports Logos Redesign</h1>
           <p className="text-gray-600 max-w-3xl mx-auto">
             A comprehensive redesign project for Somaliland's regional sports teams, creating modern, professional logos
@@ -122,7 +122,7 @@ export default function SportsLogosGallery() {
                 <button
                   key={index}
                   onClick={() => setActiveIndex(index)}
-                  className={`w-3 h-3 rounded-full ${index === activeIndex ? "bg-purple-600" : "bg-gray-300"}`}
+                  className={`w-3 h-3 rounded-full ${index === activeIndex ? "bg-primary" : "bg-gray-300"}`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
@@ -187,7 +187,7 @@ export default function SportsLogosGallery() {
               <div
                 key={index}
                 className={`bg-white rounded-lg p-4 cursor-pointer transition-all ${
-                  index === activeIndex ? "ring-2 ring-purple-600" : "hover:shadow-md"
+                  index === activeIndex ? "ring-2 ring-primary" : "hover:shadow-md"
                 }`}
                 onClick={() => setActiveIndex(index)}
               >
@@ -209,23 +209,23 @@ export default function SportsLogosGallery() {
                 <h3 className="text-lg font-semibold mb-3">Design Process</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Research into regional cultural symbols and heritage</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Development of consistent design language across all logos</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Integration of modern sports branding principles</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Color selection based on regional significance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Stakeholder feedback and iterative refinement</span>
                   </li>
                 </ul>
@@ -234,23 +234,23 @@ export default function SportsLogosGallery() {
                 <h3 className="text-lg font-semibold mb-3">Design Elements</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Shield and crest shapes for traditional sports identity</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Gold accents representing excellence and achievement</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Regional wildlife and geographical features</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Establishment years to honor team history</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Somaliland map outlines for national identity</span>
                   </li>
                 </ul>
@@ -261,7 +261,7 @@ export default function SportsLogosGallery() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+          <Button size="lg" className="bg-primary hover:bg-accent">
             <ExternalLink className="mr-2 w-4 h-4" />
             View Full Project
           </Button>

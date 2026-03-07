@@ -71,7 +71,7 @@ export default function MagazineSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">Official Publication</Badge>
+          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Official Publication</Badge>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">CSC Somaliland Magazine Collection</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             As PR & Communications Director at the Somaliland Civil Service Commission, I lead the development and
@@ -81,11 +81,11 @@ export default function MagazineSection() {
         </div>
 
         {/* Featured Magazine Collection */}
-        <Card className="mb-16 overflow-hidden bg-gradient-to-r from-purple-50 to-blue-50 border-none shadow-lg">
+        <Card className="mb-16 overflow-hidden bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 shadow-lg">
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2 items-center">
               <div className="p-8 md:p-12 space-y-6">
-                <Badge className="bg-purple-600">Complete 2023 Collection</Badge>
+                <Badge className="bg-primary">Complete 2023 Collection</Badge>
                 <h3 className="text-3xl font-bold text-gray-900">CSC Quarterly Magazine Series</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Access the complete 2023 collection of CSC Somaliland Magazines, featuring comprehensive coverage of
@@ -94,25 +94,25 @@ export default function MagazineSection() {
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-purple-600" />
+                    <Calendar className="w-4 h-4 text-primary" />
                     <span>Quarterly Publication</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-purple-600" />
+                    <Users className="w-4 h-4 text-primary" />
                     <span>Bilingual Content</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-purple-600" />
+                    <FileText className="w-4 h-4 text-primary" />
                     <span>200+ Pages Total</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Award className="w-4 h-4 text-purple-600" />
+                    <Award className="w-4 h-4 text-primary" />
                     <span>Professional Design</span>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
-                    className="bg-purple-600 hover:bg-purple-700"
+                    className="bg-primary hover:bg-accent"
                     onClick={() =>
                       window.open("https://drive.google.com/drive/folders/1dI1-QKDL5cmFDz-hvdxCBxF7vNUvxffr", "_blank")
                     }
@@ -126,7 +126,7 @@ export default function MagazineSection() {
                   </Button>
                 </div>
               </div>
-              <div className="relative h-full min-h-[400px] bg-gradient-to-r from-purple-100 to-blue-100 p-8">
+              <div className="relative h-full min-h-[400px] bg-gradient-to-r from-primary/10 to-accent/10 p-8">
                 <div className="grid grid-cols-2 gap-4 h-full">
                   <div className="space-y-4">
                     <div className="bg-white rounded-lg shadow-lg p-2 transform rotate-3 hover:rotate-0 transition-transform">
@@ -224,7 +224,7 @@ export default function MagazineSection() {
 
                   <Button
                     variant="ghost"
-                    className="w-full justify-center text-purple-600 hover:text-purple-700 hover:bg-purple-50"
+                    className="w-full justify-center text-primary hover:text-accent hover:bg-primary/10"
                     onClick={() => window.open("/portfolio/magazine", "_self")}
                   >
                     <BookOpen className="mr-2 w-4 h-4" />
@@ -239,9 +239,9 @@ export default function MagazineSection() {
         {/* Magazine Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-purple-50 rounded-xl">
-              <stat.icon className="w-8 h-8 text-purple-600 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-purple-600 mb-2">{stat.value}</div>
+            <div key={index} className="text-center p-6 bg-primary/10 rounded-xl">
+              <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+              <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
               <div className="text-gray-600 text-sm">{stat.label}</div>
             </div>
           ))}
@@ -256,19 +256,19 @@ export default function MagazineSection() {
                 <h4 className="font-semibold text-lg mb-3">Major Achievements Covered</h4>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Implementation of HRMIS (Human Resource Management Information System)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Launch of PMIS (Pension Management Information System)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Approval of Pension Policy & Bill by Cabinet</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Pay & Grading Policy validation and implementation</span>
                   </li>
                 </ul>
@@ -277,19 +277,19 @@ export default function MagazineSection() {
                 <h4 className="font-semibold text-lg mb-3">Design Excellence</h4>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Professional photography and layout design</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Consistent CSC brand identity</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>Bilingual publication (English & Somali)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <span>High-quality government event coverage</span>
                   </li>
                 </ul>
@@ -302,7 +302,7 @@ export default function MagazineSection() {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-purple-600 hover:bg-purple-700"
+            className="bg-primary hover:bg-accent"
             onClick={() => window.open("/portfolio/magazine", "_self")}
           >
             <Book className="mr-2 w-5 h-5" />

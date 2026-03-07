@@ -163,7 +163,7 @@ export default function DesignShowcase() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">Design Portfolio</Badge>
+          <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">Design Portfolio</Badge>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Complete Design Solutions</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             From digital experiences to print publications, corporate branding to large-scale applications - showcasing
@@ -255,7 +255,7 @@ export default function DesignShowcase() {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h4>
                     <p className="text-gray-600 text-sm mb-4 line-clamp-2">{project.description}</p>
@@ -264,7 +264,7 @@ export default function DesignShowcase() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="text-xs transition-colors duration-300 hover:bg-purple-50"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10"
                         >
                           {tag}
                         </Badge>
@@ -280,7 +280,7 @@ export default function DesignShowcase() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="text-purple-600 hover:text-purple-700 hover:bg-purple-50 transition-colors duration-300"
+                        className="text-primary hover:text-accent hover:bg-primary/10 transition-colors duration-300"
                       >
                         <Eye className="w-4 h-4 mr-2" />
                         View Details
@@ -307,8 +307,8 @@ export default function DesignShowcase() {
               onClick={() => setActiveCategory(category.id)}
               className={`${
                 activeCategory === category.id
-                  ? "bg-purple-600 hover:bg-purple-700 shadow-md"
-                  : "hover:bg-purple-50 hover:text-purple-600"
+                  ? "bg-primary hover:bg-accent shadow-md"
+                  : "hover:bg-primary/10 hover:text-primary"
               } transition-all duration-300 transform hover:scale-105`}
             >
               <category.icon className={`w-4 h-4 mr-2 ${activeCategory === category.id ? "animate-pulse" : ""}`} />
@@ -399,7 +399,7 @@ export default function DesignShowcase() {
                       </div>
                     )}
 
-                    <div className="absolute inset-0 bg-purple-600/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                       <Button
                         size="sm"
                         variant="secondary"
@@ -412,14 +412,14 @@ export default function DesignShowcase() {
                   </div>
                   <CardContent className="p-6">
                     <div className="mb-2">
-                      <Badge
-                        variant="secondary"
-                        className="text-xs transition-all duration-300 group-hover:bg-purple-100 group-hover:text-purple-800"
-                      >
-                        {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
-                      </Badge>
+                        <Badge
+                          variant="outline"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10"
+                        >
+                          {tag}
+                        </Badge>
                     </div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h4>
                     <p className="text-gray-600 text-sm mb-4">{project.description}</p>
@@ -428,7 +428,7 @@ export default function DesignShowcase() {
                         <Badge
                           key={index}
                           variant="outline"
-                          className="text-xs transition-colors duration-300 hover:bg-purple-50"
+                          className="text-xs transition-colors duration-300 hover:bg-primary/10"
                         >
                           {tag}
                         </Badge>
@@ -447,7 +447,7 @@ export default function DesignShowcase() {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <Card className="bg-gradient-to-r from-purple-50 to-blue-50 border-none overflow-hidden">
+          <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 overflow-hidden">
             <CardContent className="p-8">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Design Capabilities</h3>
@@ -472,8 +472,8 @@ export default function DesignShowcase() {
                     className="text-center p-4 hover:bg-white/50 rounded-xl transition-colors duration-300 transform hover:scale-105"
                   >
                     <div className="relative">
-                      <div className="absolute -inset-1 bg-purple-100 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                      <item.icon className="w-12 h-12 text-purple-600 mx-auto mb-3 relative z-10" />
+                    <div className="absolute -inset-1 bg-primary/10 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    <item.icon className="w-12 h-12 text-primary mx-auto mb-3 relative z-10" />
                     </div>
                     <h4 className="font-semibold mb-2">{item.title}</h4>
                     <p className="text-sm text-gray-600">{item.desc}</p>
@@ -493,7 +493,7 @@ export default function DesignShowcase() {
         >
           <Button
             size="lg"
-            className="bg-purple-600 hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              className="bg-primary hover:bg-accent transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             <ExternalLink className="mr-2 w-5 h-5" />
             View Complete Portfolio

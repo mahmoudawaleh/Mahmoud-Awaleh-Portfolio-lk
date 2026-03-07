@@ -50,7 +50,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">MA</span>
               </div>
               <span className="font-bold text-xl">Mahmoud Awaleh</span>
@@ -71,7 +71,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Follow on ${social.name}`}
-                  className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors"
+                  className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -89,7 +89,7 @@ export default function Footer() {
                     <a
                       href={link.href}
                       {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="text-gray-400 hover:text-purple-400 transition-colors"
+                      className="text-gray-400 hover:text-primary transition-colors"
                     >
                       {link.name}
                       {link.external && <span className="sr-only"> (opens in new tab)</span>}
@@ -105,10 +105,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© {currentYear} Mahmoud Mohamed Awaleh. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#contact" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">
+              <a href="#contact" className="text-gray-400 hover:text-primary transition-colors text-sm">
                 Privacy Policy
               </a>
-              <a href="#contact" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">
+              <a href="#contact" className="text-gray-400 hover:text-primary transition-colors text-sm">
                 Terms of Service
               </a>
             </div>

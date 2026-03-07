@@ -49,7 +49,7 @@ export default function BlogPost() {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="mb-8">
-          <Link href="/blog" className="inline-flex items-center text-purple-600 hover:text-purple-700">
+          <Link href="/blog" className="inline-flex items-center text-primary hover:text-accent">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
           </Link>
@@ -134,7 +134,7 @@ export default function BlogPost() {
         </article>
 
         {/* Featured Link Card */}
-        <Card className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <Card className="mt-8 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
           <CardContent className="p-6">
             <h3 className="text-lg font-semibold mb-2">Explore the Google Gemini Project</h3>
             <p className="text-gray-600 mb-4">
@@ -142,7 +142,7 @@ export default function BlogPost() {
             </p>
             <Button
               onClick={() => window.open("https://g.co/gemini/share/93e5022cdb2a", "_blank")}
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-primary hover:bg-accent"
             >
               <ExternalLink className="w-4 h-4 mr-2" />
               View Gemini Project
@@ -170,7 +170,7 @@ export default function BlogPost() {
                   experience in graphic design, marketing, and public relations. He currently serves as the PR &
                   Communications Director at the Somaliland Civil Service Commission.
                 </p>
-                <Link href="/#about" className="text-purple-600 hover:text-purple-700 font-medium">
+                <Link href="/#about" className="text-primary hover:text-accent font-medium">
                   Learn more
                 </Link>
               </div>
