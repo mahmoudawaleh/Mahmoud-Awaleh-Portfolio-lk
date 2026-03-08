@@ -411,14 +411,6 @@ export default function DesignShowcase() {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <div className="mb-2">
-                        <Badge
-                          variant="outline"
-                          className="text-xs transition-colors duration-300 hover:bg-primary/10"
-                        >
-                          {tag}
-                        </Badge>
-                    </div>
                     <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h4>
