@@ -1,0 +1,1 @@
+<?php get_header(); ?><main class="m2-page"><div class="m2-container"><?php while(have_posts()):the_post(); ?><article><small><?php echo esc_html(get_the_date()); ?></small><h1><?php the_title(); ?></h1><?php if(has_post_thumbnail()) the_post_thumbnail('large'); ?><div><?php the_content(); ?></div></article><?php endwhile; ?></div></main><?php get_footer(); ?>
