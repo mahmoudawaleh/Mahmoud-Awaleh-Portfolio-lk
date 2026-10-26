@@ -27,9 +27,9 @@ export default function Hero() {
                 <span className="text-purple-600">Mahmoud Awaleh</span>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                I am a seasoned communication and creative professional with over 15 years of experience in graphic
-                design, marketing, and public relations. Currently serving as PR & Communications Director at Somaliland
-                Civil Service Commission.
+                I work at the intersection of governance, institutional strategy, and digital systems—helping
+                organizations turn complex challenges into clear operating models, communication, and practical
+                digital solutions.
               </p>
             </div>
 
@@ -51,16 +51,16 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">15+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
+                <div className="text-2xl font-bold text-purple-600">GovTech</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Governance architecture</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">200+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Projects Done</div>
+                <div className="text-2xl font-bold text-purple-600">Systems</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Digital product design</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">98%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+                <div className="text-2xl font-bold text-purple-600">Strategy</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Institutional advisory</div>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function Hero() {
               <div className="relative bg-white dark:bg-gray-800 rounded-full p-4 shadow-2xl">
                 <Image
                   src="/images/mahmoud-formal.jpg"
-                  alt="Mahmoud Mohamed Awaleh - PR and Communications Director"
+                  alt="Mahmoud Awaleh"
                   width={400}
                   height={400}
                   className="rounded-full object-cover"

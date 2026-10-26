@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Send, Facebook, Instagram, Linkedin, Loader2, CheckCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Send, Facebook, Instagram, Linkedin } from "lucide-react"
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -26,8 +26,7 @@ export default function Contact() {
     subject: "",
     message: "",
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [formStatusError, setFormStatusError] = useState("")
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const validateForm = () => {
@@ -44,26 +43,20 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!validateForm()) return
 
-    setIsSubmitting(true)
-
-    // Simulate form submission (replace with actual API call)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" })
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+    // Do not claim success until a real message-delivery endpoint is configured.
+    setFormStatusError(
+      "This form is not connected to message delivery yet. Your message has not been sent. Please contact the site owner through a verified contact channel."
+    )
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+    setFormStatusError("")
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }))
     }
@@ -178,16 +171,7 @@ export default function Contact() {
           {/* Contact Form - Updated with proper labels and validation */}
           <Card className="dark:bg-gray-800 dark:border-gray-700">
             <CardContent className="p-8">
-              {isSubmitted ? (
-                <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Thank you for reaching out. I'll get back to you soon.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label
@@ -320,26 +304,21 @@ export default function Contact() {
                     )}
                   </div>
 
+                  {formStatusError && (
+                    <p role="alert" aria-live="polite" className="text-red-600 text-sm">
+                      {formStatusError}
+                    </p>
+                  )}
+
                   <Button
                     type="submit"
                     size="lg"
                     className="w-full bg-purple-600 hover:bg-purple-700"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="mr-2 w-4 h-4 animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 w-4 h-4" />
-                      </>
-                    )}
+                    Send Message
+                    <Send className="ml-2 w-4 h-4" />
                   </Button>
-                </form>
-              )}
+              </form>
             </CardContent>
           </Card>
         </div>
