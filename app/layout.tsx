@@ -3,14 +3,15 @@ import type { Metadata, Viewport } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Mahmoud Mohamed Awaleh | PR & Communications Director | Graphic Designer",
+  metadataBase: new URL("https://m2awaleh.vercel.app"),
+  title: "Mahmoud Awaleh | Independent Strategic Consultant & Governance Architect",
   description:
-    "Strategic communication and creative design professional with 15+ years of experience. PR & Communications Director at Somaliland Civil Service Commission. Expertise in branding, public relations, and digital marketing.",
+    "Independent strategic consultant focused on governance architecture, institutional strategy, and practical digital systems.",
   keywords: [
     "Mahmoud Awaleh",
-    "graphic designer",
-    "PR director",
-    "communications",
+    "governance architecture",
+    "strategic consulting",
+    "digital systems",
     "Somaliland",
     "branding",
     "public relations",
@@ -20,23 +21,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mahmoudawaleh.com",
-    title: "Mahmoud Mohamed Awaleh | PR & Communications Director",
+    url: "https://m2awaleh.vercel.app",
+    title: "Mahmoud Awaleh | Independent Strategic Consultant",
     description:
-      "Strategic communication and creative design professional with 15+ years of experience in graphic design, marketing, and public relations.",
+      "Governance architecture, institutional strategy, and practical digital systems.",
     siteName: "Mahmoud Awaleh Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mahmoud Mohamed Awaleh | PR & Communications Director",
-    description: "Strategic communication and creative design professional with 15+ years of experience.",
+    title: "Mahmoud Awaleh | Independent Strategic Consultant",
+    description: "Governance architecture, institutional strategy, and practical digital systems.",
     creator: "@mahmoudawaleh",
   },
   robots: {
     index: true,
     follow: true,
   },
-    generator: 'v0.app'
 }
 
 export const viewport: Viewport = {
