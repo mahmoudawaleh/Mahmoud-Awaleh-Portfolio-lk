@@ -1,5 +1,6 @@
 import Header from "@/components/header"
 import Hero from "@/components/hero"
+import ProfileCard from "@/components/ui/profile-card"
 import About from "@/components/about"
 import WorkProcess from "@/components/work-process"
 import Portfolio from "@/components/portfolio"
@@ -19,6 +20,7 @@ export default function HomePage() {
     <div id="main-content" className="min-h-screen bg-white">
       <Header />
       <Hero />
+      <ProfileCard />
       <About />
       <WorkProcess />
       <Portfolio />
