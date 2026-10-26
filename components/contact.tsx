@@ -28,6 +28,7 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [formStatusError, setFormStatusError] = useState("")
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const validateForm = () => {
@@ -44,26 +45,20 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!validateForm()) return
 
-    setIsSubmitting(true)
-
-    // Simulate form submission (replace with actual API call)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" })
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+    // Do not claim success until a real message-delivery endpoint is configured.
+    setFormStatusError(
+      "This form is not connected to message delivery yet. Your message has not been sent. Please contact the site owner through a verified contact channel."
+    )
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+    setFormStatusError("")
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }))
     }
@@ -319,6 +314,12 @@ export default function Contact() {
                       </p>
                     )}
                   </div>
+
+                  {formStatusError && (
+                    <p role="alert" aria-live="polite" className="text-red-600 text-sm">
+                      {formStatusError}
+                    </p>
+                  )}
 
                   <Button
                     type="submit"
