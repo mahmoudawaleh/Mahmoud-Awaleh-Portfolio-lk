@@ -92,3 +92,16 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+/* M2 Void & Gold theme bridge for legacy utility classes */
+@layer utilities {
+  .text-purple-600 { color: #80620C !important; }
+  .text-purple-500, .text-purple-400 { color: #D4AF37 !important; }
+  .bg-purple-600, .bg-purple-700 { background-color: #D4AF37 !important; color: #171A1C !important; }
+  .hover\\:bg-purple-700:hover, .hover\\:bg-purple-600:hover { background-color: #E2C45D !important; color: #171A1C !important; }
+  .bg-purple-50 { background-color: #FBF7E8 !important; }
+  .bg-purple-100 { background-color: #F4E9C4 !important; }
+  .border-purple-600, .border-purple-500 { border-color: #D4AF37 !important; }
+  .ring-purple-600, .focus-visible\\:ring-purple-600:focus-visible { --tw-ring-color: #D4AF37 !important; }
+}
