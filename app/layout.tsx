@@ -3,62 +3,58 @@ import type { Metadata, Viewport } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Mahmoud Mohamed Awaleh | PR & Communications Director | Graphic Designer",
+  metadataBase: new URL("https://m2awaleh.vercel.app"),
+  title: "Mahmoud Awaleh | Digital Architect & Sovereign Innovation Strategist",
   description:
-    "Strategic communication and creative design professional with 15+ years of experience. PR & Communications Director at Somaliland Civil Service Commission. Expertise in branding, public relations, and digital marketing.",
+    "Independent strategic consultant designing governance systems, digital public infrastructure, institutional workflows and trustworthy digital products in the Republic of Somaliland.",
   keywords: [
     "Mahmoud Awaleh",
-    "graphic designer",
-    "PR director",
-    "communications",
-    "Somaliland",
-    "branding",
-    "public relations",
+    "Digital Architect",
+    "Sovereign Innovation Strategist",
+    "GovTech",
+    "Digital public infrastructure",
+    "Governance systems",
+    "Institutional design",
+    "Quality engineering",
+    "Republic of Somaliland",
+    "Hargeisa",
   ],
-  authors: [{ name: "Mahmoud Mohamed Awaleh" }],
-  creator: "Mahmoud Mohamed Awaleh",
+  authors: [{ name: "Mahmoud Awaleh" }],
+  creator: "Mahmoud Awaleh",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mahmoudawaleh.com",
-    title: "Mahmoud Mohamed Awaleh | PR & Communications Director",
+    url: "https://m2awaleh.vercel.app",
+    title: "Mahmoud Awaleh | Digital Architect",
     description:
-      "Strategic communication and creative design professional with 15+ years of experience in graphic design, marketing, and public relations.",
-    siteName: "Mahmoud Awaleh Portfolio",
+      "Governance, institutional design and trustworthy digital infrastructure.",
+    siteName: "Mahmoud Awaleh",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mahmoud Mohamed Awaleh | PR & Communications Director",
-    description: "Strategic communication and creative design professional with 15+ years of experience.",
+    title: "Mahmoud Awaleh | Digital Architect",
+    description: "Governance, institutional design and trustworthy digital infrastructure.",
     creator: "@mahmoudawaleh",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-    generator: 'v0.app'
+  robots: { index: true, follow: true },
 }
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: light)", color: "#F8F3E3" },
+    { media: "(prefers-color-scheme: dark)", color: "#171A1C" },
   ],
   width: "device-width",
   initialScale: 1,
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-purple-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-md"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-[#D4AF37] focus:px-4 focus:py-2 focus:text-[#171A1C]"
         >
           Skip to main content
         </a>
