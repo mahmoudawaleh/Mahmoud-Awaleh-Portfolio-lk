@@ -1,97 +1,65 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Award, Users, Palette } from "lucide-react"
-import Image from "next/image"
+import { ArrowUpRight, Compass, Database, ShieldCheck, Workflow } from "lucide-react"
+
+const focusAreas = [
+  {
+    icon: Compass,
+    title: "Governance architecture",
+    description: "Translate institutional mandates, information needs and public-service processes into clear digital operating models.",
+  },
+  {
+    icon: Workflow,
+    title: "Product and workflow design",
+    description: "Shape practical user journeys, requirements, service workflows and interfaces around real operational needs.",
+  },
+  {
+    icon: Database,
+    title: "Data and institutional memory",
+    description: "Improve how records, knowledge, data quality and reusable information are structured and maintained.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality and trust",
+    description: "Apply evidence-led QA across UX, frontend, backend, security, accessibility and release readiness.",
+  },
+]
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="bg-[#F8F3E3] py-20 text-[#171A1C] dark:bg-[#171A1C] dark:text-[#F8F3E3]">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
-            <div className="relative">
-              <Image
-                src="/images/mahmoud-office.jpg"
-                alt="Mahmoud Mohamed Awaleh in his office"
-                width={500}
-                height={600}
-                className="rounded-2xl object-cover shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Award className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900">15+ Years</div>
-                    <div className="text-sm text-gray-600">Experience</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-gray-900">
-                I am Professional User
-                <br />
-                <span className="text-purple-600">Experience Designer</span>
-              </h2>
-              <p className="text-gray-600 leading-relaxed">
-                Before joining the civil service, I built a successful career in the private sector, working as a
-                Creative Designer and Marketing Manager since 2011. I earned some of the highest salaries in Somaliland,
-                including significant sales commissions, which reflected my marketing skills and business acumen.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                I never joined the government for status or financial gain. Like many Somalilanders, I often criticized
-                the government's weak public services and lack of effective communication. However, I challenged myself
-                to move beyond criticism and contribute actively to my country's development.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                      <Users className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Team Leadership</div>
-                      <div className="text-sm text-gray-600">Strategic Management</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                      <Palette className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Creative Design</div>
-                      <div className="text-sm text-gray-600">Brand Development</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <Button
-              size="lg"
-              className="bg-purple-600 hover:bg-purple-700"
-              onClick={() => window.open("https://issuu.com/mahmoudawaleh/docs/m2_portfolio_2021", "_blank")}
-            >
-              View Complete Portfolio
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </div>
+        <div className="mx-auto max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#9A7816] dark:text-[#D4AF37]">Approach and expertise</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Designing systems that institutions can understand, use and trust.</h2>
+          <p className="mt-6 text-base leading-8 text-[#62686D] dark:text-white/65">
+            My professional work combines strategic communications, creative practice, governance, research and digital product development. I focus on the practical connection between institutional goals, the people who use services, the information those services depend on, and the systems that keep them reliable.
+          </p>
+          <p className="mt-4 text-base leading-8 text-[#62686D] dark:text-white/65">
+            I previously served as PR &amp; Communications Director at the Civil Service Commission. That role is completed; my current positioning is independent strategic consulting and governance-focused digital architecture.
+          </p>
         </div>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          {focusAreas.map(({ icon: Icon, title, description }) => (
+            <Card key={title} className="border-black/10 bg-white/70 shadow-sm dark:border-white/10 dark:bg-white/[0.04]">
+              <CardContent className="flex gap-4 p-6">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/35 bg-[#D4AF37]/10 text-[#9A7816] dark:text-[#D4AF37]">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#62686D] dark:text-white/60">{description}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <a href="https://github.com/mahmoudawaleh" target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[#80620C] hover:text-[#9A7816] dark:text-[#D4AF37]">
+          Review public work <ArrowUpRight className="h-4 w-4" />
+        </a>
       </div>
     </section>
   )
