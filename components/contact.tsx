@@ -44,21 +44,15 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!validateForm()) return
 
-    setIsSubmitting(true)
-
-    // Simulate form submission (replace with actual API call)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" })
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+    const subject = encodeURIComponent(formData.subject || "Project enquiry")
+    const body = encodeURIComponent(
+      "Name: " + formData.firstName + " " + formData.lastName + "\nEmail: " + formData.email + "\nPhone: " + formData.phone + "\n\n" + formData.message
+    )
+    window.location.href = "mailto:mahmoudawaleh@gmail.com?subject=" + subject + "&body=" + body
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -106,7 +100,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="mailto:info@cscsomaliland.org"
+                href="https://linkedin.com/in/mahmoudawaleh" target="_blank" rel="noopener noreferrer"
                 className="flex items-center space-x-4 group hover:bg-purple-50 dark:hover:bg-purple-900/20 p-3 rounded-lg transition-colors"
               >
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center">
@@ -115,7 +109,7 @@ export default function Contact() {
                 <div>
                   <div className="font-semibold text-gray-900 dark:text-white">Email</div>
                   <div className="text-gray-600 dark:text-gray-300 group-hover:text-purple-600">
-                    info@cscsomaliland.org
+                    linkedin.com/in/mahmoudawaleh
                   </div>
                 </div>
               </a>
@@ -181,9 +175,9 @@ export default function Contact() {
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Email draft prepared</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Thank you for reaching out. I'll get back to you soon.
+                    Complete and send the message in your email application. This website does not store or submit form data.
                   </p>
                 </div>
               ) : (
@@ -323,7 +317,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-purple-600 hover:bg-purple-700"
+                    className="w-full bg-[#D4AF37] text-[#171A1C] hover:bg-[#E2C45D]"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
